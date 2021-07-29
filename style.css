@@ -93,6 +93,7 @@ input:hover {
   display: flex;
   flex-wrap: wrap;
   margin: 35px;
+  margin-bottom: 140px;
 }
 
 .day {
@@ -102,6 +103,8 @@ input:hover {
   border-radius: 100%;
   margin: 2px;
   z-index: 3;
+  transition: 0.2s all;
+  cursor: pointer;
 }
 
 .btns {
@@ -110,4 +113,15 @@ input:hover {
 
 .reset {
   color: tomato;
+}
+
+.card {
+  width: 100%;
+  height: 100px;
+  background-color: rgba(30, 3, 73, 0.055);
+  backdrop-filter: blur(14px);
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  z-index: 3;
 }

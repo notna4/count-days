@@ -98,10 +98,11 @@ function showCalendar(days) {
   ];
 
   const calendar = document.getElementById("calendar");
+  var bDay = 0;
   var k = 0;
   var j = 0;
   for (let i = 0; i < days; i++) {
-    const day = document.createElement("div");
+    const day = document.createElement("divv");
     day.className = "day";
     if (k <= 1825) {
       day.style.backgroundColor = ageColors[j];
@@ -113,6 +114,11 @@ function showCalendar(days) {
         j++;
         k = 0;
       }
+    }
+
+    if (i == bDay) {
+      day.style.backgroundColor = "black";
+      bDay = bDay + 365;
     }
 
     if (days >= 1825) {
@@ -152,6 +158,16 @@ function whatAge(days) {
   var years = Math.floor(days / 365);
   var months = Math.floor((days % 365) / 30);
   var weeks = Math.floor((days % 365) / 7);
+
+  const body = document.querySelector("body");
+  const card = document.createElement("div");
+  card.className = "card";
+
+  const text = document.createElement("p");
+  text.textContent = years + ", " + months + ", " + weeks + " old.";
+
+  card.appendChild(text);
+  body.appendChild(card);
 }
 
 function reloadPage() {

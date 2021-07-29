@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Timeline</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="header">
+      <div class="container">
+        <p>Select dates</p>
+        <div class="start">
+          <input type="date" id="start-date" required />
+        </div>
+        <div class="end">
+          <input type="date" id="end-date" required />
+        </div>
+        <div class="btns">
+          <button class="calc" id="calculate">Generate</button>
+          <button class="reset" id="reset" onclick="reloadPage()">Reset</button>
+        </div>
+      </div>
+    </div>
+    <p id="dayCounter"></p>
+    <p id="fiveYears"></p>
+    <div class="calendar" id="calendar"></div>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

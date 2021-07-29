@@ -39,19 +39,21 @@ $("#submitEnd").on("click", function () {
 
 // get data
 $("#calculate").on("click", function () {
-  var Sdate = $("#start-date").val().split("-");
-  console.log(Sdate, $("#start-date").val());
+  var Sdate = $("#start-date").val();
+  var mySdate = Sdate.toString().replace(/-/g, "/");
+
   Sday = Sdate[2];
   Smonth = Sdate[1];
   Syear = Sdate[0];
-  sData = Sdate;
+  sData = mySdate;
 
-  var Edate = $("#end-date").val().split("-");
-  console.log(Edate, $("#end-date").val());
+  var Edate = $("#end-date").val();
+  var myEdate = Edate.toString().replace(/-/g, "/");
+
   Eday = Edate[2];
   Emonth = Edate[1];
   Eyear = Edate[0];
-  eData = Edate;
+  eData = myEdate;
 });
 
 const calculateBtn = document.getElementById("calculate");
@@ -64,16 +66,13 @@ function calculateDays(sData, eData, Syear, Smonth, Sday, Eyear, Emonth, Eday) {
   const oneDay = 24 * 60 * 60 * 1000;
   const firstDate = new Date(sData);
   const secondDate = new Date(eData);
-  console.log(firstDate);
-  console.log(secondDate);
 
   const diffDays = Math.round(Math.abs((firstDate - secondDate) / oneDay));
-  console.log(diffDays);
+  document.getElementById("calculate").disabled = true;
+  document.getElementById("calculate").style.backgroundColor = "tomato";
 
   showCalendar(diffDays);
 }
-
-//showCalendar(7146);
 
 function showCalendar(days) {
   var ageColors = [
@@ -147,16 +146,12 @@ function showCalendar(days) {
 
     calendar.appendChild(day);
   }
-  document.getElementById("calculate").disabled = true;
-  document.getElementById("calculate").style.backgroundColor = "tomato";
 }
 
 function whatAge(days) {
   var years = Math.floor(days / 365);
   var months = Math.floor((days % 365) / 30);
   var weeks = Math.floor((days % 365) / 7);
-
-  console.log(years + " " + months + " " + weeks);
 }
 
 function reloadPage() {

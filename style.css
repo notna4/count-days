@@ -17,6 +17,7 @@ body {
   height: 300px;
   background-color: #28282a;
   margin: 40px;
+  margin-bottom: 20px;
   gap: 20px;
   border-radius: 8px;
   -webkit-box-shadow: 0px 0px 50px 9px rgba(0, 0, 0, 0.39);
@@ -42,10 +43,18 @@ p {
 .end {
   height: 50px;
   display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(112, 112, 112);
   background-color: #313133;
   border-radius: 8px;
   margin-left: 35px;
   margin-right: 35px;
+  z-index: 3;
+}
+
+.sticky {
+  background: #f5b335;
 }
 
 .calc {
@@ -62,8 +71,6 @@ button {
   color: rgb(112, 112, 112);
   border-radius: 10px;
   font-size: 15px;
-  margin-left: 35px;
-  margin-right: 35px;
   transition: 0.3s all;
 }
 
@@ -109,19 +116,62 @@ input:hover {
 
 .btns {
   display: flex;
+  justify-content: space-evenly;
 }
 
 .reset {
   color: tomato;
 }
 
+.toggles {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 150px;
+  height: 80px;
+  background-color: #28282a;
+  margin-left: 40px;
+  gap: 20px;
+  border-radius: 8px;
+  -webkit-box-shadow: 0px 0px 50px 9px rgba(0, 0, 0, 0.39);
+  box-shadow: 0px 0px 50px 9px rgba(0, 0, 0, 0.39);
+}
+
+.toggle {
+  border-radius: 100px;
+  height: 50px;
+  width: 110px;
+  background-color: gold;
+  color: white;
+}
+
+.toggle:hover {
+  background-color: rgb(241, 223, 120);
+  cursor: pointer;
+}
 .card {
   width: 100%;
   height: 100px;
-  background-color: rgba(30, 3, 73, 0.055);
-  backdrop-filter: blur(14px);
+  background-color: rgb(30, 3, 73);
   position: fixed;
   bottom: 0;
   right: 0;
+  z-index: 3;
+}
+
+.myFirstYear {
+  color: white;
+  font-size: 20px;
+  margin-top: 20px;
+  margin-left: 35px;
+  margin-bottom: 0px;
+}
+
+.marginYears {
+  display: flex;
+}
+
+h4 {
+  color: white;
   z-index: 3;
 }

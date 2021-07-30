@@ -20,18 +20,23 @@
         <div class="start">
           <input type="date" id="start-date" required />
         </div>
-        <div class="end">
-          <input type="date" id="end-date" required />
-        </div>
+        <div class="end" id="end"></div>
         <div class="btns">
           <button class="calc" id="calculate">Generate</button>
           <button class="reset" id="reset" onclick="reloadPage()">Reset</button>
         </div>
       </div>
     </div>
+    <div class="toggles">
+      <button class="toggle" id="isYears">Show years</button>
+    </div>
     <p id="dayCounter"></p>
     <p id="fiveYears"></p>
-    <div class="calendar" id="calendar"></div>
+    <div class="whole">
+      <h4 class="myFirstYear" id="myFirstYear"></h4>
+      <div class="marginYears" id="marginYears"></div>
+      <div class="calendar" id="calendar"></div>
+    </div>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="script.js"></script>
   </body>

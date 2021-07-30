@@ -7,6 +7,7 @@ body {
 
 .header {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .container {
@@ -22,6 +23,14 @@ body {
   border-radius: 8px;
   -webkit-box-shadow: 0px 0px 50px 9px rgba(0, 0, 0, 0.39);
   box-shadow: 0px 0px 50px 9px rgba(0, 0, 0, 0.39);
+}
+
+h1 {
+  color: white;
+  font-size: 60px;
+  margin: 0;
+  margin-top: 35px;
+  margin-left: 35px;
 }
 
 p {

@@ -15,20 +15,25 @@
   </head>
   <body>
     <div class="header">
-      <div class="container">
-        <p>Select dates</p>
-        <div class="start">
-          <input type="date" id="start-date" required />
+      <div id="menu">
+        <div class="container">
+          <p>Select birth day</p>
+          <div class="start">
+            <input type="date" id="start-date" required />
+          </div>
+          <div class="end" id="end"></div>
+          <div class="btns">
+            <button class="calc" id="calculate">Generate</button>
+            <button class="reset" id="reset" onclick="reloadPage()">
+              Reset
+            </button>
+          </div>
         </div>
-        <div class="end" id="end"></div>
-        <div class="btns">
-          <button class="calc" id="calculate">Generate</button>
-          <button class="reset" id="reset" onclick="reloadPage()">Reset</button>
+        <div class="toggles">
+          <button class="toggle" id="isYears">Show years</button>
         </div>
       </div>
-    </div>
-    <div class="toggles">
-      <button class="toggle" id="isYears">Show years</button>
+      <h1>Timeline of your life.</h1>
     </div>
     <p id="dayCounter"></p>
     <p id="fiveYears"></p>

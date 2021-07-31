@@ -184,3 +184,23 @@ h4 {
   color: white;
   z-index: 3;
 }
+
+.title {
+  width: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 35px;
+  margin-bottom: 140px;
+}
+
+.dot {
+  background: gold;
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  margin: 2px;
+  z-index: 3;
+  transition: 0.2s all;
+}

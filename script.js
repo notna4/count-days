@@ -282,3 +282,15 @@ function whatAge(days, age, totalDays) {
 function reloadPage() {
   window.location.reload();
 }
+
+makeTitle();
+
+function makeTitle() {
+  const title = document.getElementById("title");
+  for (let i = 0; i < 10; i++) {
+    const dot = document.createElement("divv");
+    dot.className = "dot";
+    console.log("da");
+    title.appendChild(dot);
+  }
+}
